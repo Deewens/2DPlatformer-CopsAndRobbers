@@ -1,0 +1,1176 @@
+fileFormatVersion: 2
+guid: 6c14fed95c9e97e45a9102d05abc1998
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2796155670685138431
+    second: raiser_anim_big_0
+  - first:
+      213: -584516837555887033
+    second: raiser_anim_big_1
+  - first:
+      213: 2855118936115615910
+    second: raiser_anim_big_2
+  - first:
+      213: -3784213492832008843
+    second: raiser_anim_big_3
+  - first:
+      213: 424471707506493108
+    second: raiser_anim_big_4
+  - first:
+      213: 2723884570037803008
+    second: raiser_anim_big_5
+  - first:
+      213: -3934716368840255792
+    second: raiser_anim_big_6
+  - first:
+      213: -1165127293599825114
+    second: raiser_anim_big_7
+  - first:
+      213: 906064483142763794
+    second: raiser_anim_big_8
+  - first:
+      213: 4120106145293095353
+    second: raiser_anim_big_9
+  - first:
+      213: -3182112909510255658
+    second: raiser_anim_big_10
+  - first:
+      213: 2206402423425619484
+    second: raiser_anim_big_11
+  - first:
+      213: -2062111832563017448
+    second: raiser_anim_big_12
+  - first:
+      213: 6894245586090543051
+    second: raiser_anim_big_13
+  - first:
+      213: -4845793664545771818
+    second: raiser_anim_big_14
+  - first:
+      213: -4956963493486934794
+    second: raiser_anim_big_15
+  - first:
+      213: 3363277784076221114
+    second: raiser_anim_big_16
+  - first:
+      213: -2744647918884660853
+    second: raiser_anim_big_17
+  - first:
+      213: 8827544880965223757
+    second: raiser_anim_big_18
+  - first:
+      213: 2321597705128680509
+    second: raiser_anim_big_19
+  - first:
+      213: 4941963701360281136
+    second: raiser_anim_big_20
+  - first:
+      213: -6045587645825342981
+    second: raiser_anim_big_21
+  - first:
+      213: -1471128061636303413
+    second: raiser_anim_big_22
+  - first:
+      213: -1069584477028767524
+    second: raiser_anim_big_23
+  - first:
+      213: 2930322740210170840
+    second: raiser_anim_big_24
+  - first:
+      213: 7468969634456922680
+    second: raiser_anim_big_25
+  - first:
+      213: 8679071364941931709
+    second: raiser_anim_big_26
+  - first:
+      213: -1764424945507306482
+    second: raiser_anim_big_27
+  - first:
+      213: -6602915525949503774
+    second: raiser_anim_big_28
+  - first:
+      213: -7836055247217934707
+    second: raiser_anim_big_29
+  - first:
+      213: -7498023577761341794
+    second: raiser_anim_big_30
+  - first:
+      213: -1196255757861649688
+    second: raiser_anim_big_31
+  - first:
+      213: 6272910130483723041
+    second: raiser_anim_big_32
+  - first:
+      213: 6904146663229027919
+    second: raiser_anim_big_33
+  - first:
+      213: 6640143722276754013
+    second: raiser_anim_big_34
+  - first:
+      213: -8432685596277965647
+    second: raiser_anim_big_35
+  - first:
+      213: -4946866449256889401
+    second: raiser_anim_big_36
+  - first:
+      213: 1335199093313568831
+    second: raiser_anim_big_37
+  - first:
+      213: -4700878526222990571
+    second: raiser_anim_big_38
+  - first:
+      213: 2607511297445385968
+    second: raiser_anim_big_39
+  - first:
+      213: 5287246381863687814
+    second: raiser_anim_big_40
+  - first:
+      213: 3113022463334690742
+    second: raiser_anim_big_41
+  - first:
+      213: -784018168712630619
+    second: raiser_anim_big_42
+  - first:
+      213: 4102736635460971304
+    second: raiser_anim_big_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: raiser_anim_big_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 257
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1024e107b3f0239d0800000000000000
+      internalID: -2796155670685138431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 257
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7442f3c780163e7f0800000000000000
+      internalID: -584516837555887033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 257
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a899aa9b8b6f9720800000000000000
+      internalID: 2855118936115615910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 257
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575028db0e5cb7bc0800000000000000
+      internalID: -3784213492832008843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_4
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 257
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6c02fd4c604e500800000000000000
+      internalID: 424471707506493108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 257
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008554ea59e2dc520800000000000000
+      internalID: 2723884570037803008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_6
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 257
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d69c5f3f441569c0800000000000000
+      internalID: -3934716368840255792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_7
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 257
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623ceda46e2a4dfe0800000000000000
+      internalID: -1165127293599825114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 193
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215825dc8dcf29c00800000000000000
+      internalID: 906064483142763794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 193
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1591bb5be8d2930800000000000000
+      internalID: 4120106145293095353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 193
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbd4791b2dd6d3d0800000000000000
+      internalID: -3182112909510255658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 193
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1658d76057be9e10800000000000000
+      internalID: 2206402423425619484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 193
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81993fcb638e163e0800000000000000
+      internalID: -2062111832563017448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 193
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc74b3155d74daf50800000000000000
+      internalID: 6894245586090543051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_14
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 193
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de29e1165840ccb0800000000000000
+      internalID: -4845793664545771818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 193
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4c12e37f3553bb0800000000000000
+      internalID: -4956963493486934794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 129
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba73d04353ccae20800000000000000
+      internalID: 3363277784076221114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_17
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 129
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b895d51724d09e9d0800000000000000
+      internalID: -2744647918884660853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_18
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 129
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4500c48c4db18a70800000000000000
+      internalID: 8827544880965223757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_19
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 129
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c9e8dffc8f73020800000000000000
+      internalID: 2321597705128680509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_20
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 129
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03644708dc1659440800000000000000
+      internalID: 4941963701360281136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_21
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 129
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf127182112c91ca0800000000000000
+      internalID: -6045587645825342981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_22
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 129
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc52f0382d0859be0800000000000000
+      internalID: -1471128061636303413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_23
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 129
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8ad65c5921821f0800000000000000
+      internalID: -1069584477028767524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_24
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 128
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbf977b1099aa820800000000000000
+      internalID: 2930322740210170840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 65
+        width: 49
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83aebfb6f4c17a760800000000000000
+      internalID: 7468969634456922680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_26
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 65
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4e0a73c61427870800000000000000
+      internalID: 8679071364941931709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_27
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 65
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04f2324cd08387e0800000000000000
+      internalID: -1764424945507306482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_28
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 65
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e64ed9105bbd54a0800000000000000
+      internalID: -6602915525949503774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_29
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 65
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e3d35154db04390800000000000000
+      internalID: -7836055247217934707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_30
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 65
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e1802484ba1f790800000000000000
+      internalID: -7498023577761341794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_31
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 65
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2042ce9bb066fe0800000000000000
+      internalID: -1196255757861649688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_32
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 65
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b7e63478add0750800000000000000
+      internalID: 6272910130483723041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_33
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 38
+        width: 38
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46f6fa7fc470df50800000000000000
+      internalID: 6904146663229027919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_34
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5298dfc887862c50800000000000000
+      internalID: 6640143722276754013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_35
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc7c43e02519fa80800000000000000
+      internalID: -8432685596277965647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_36
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3cebc8c23395bb0800000000000000
+      internalID: -4946866449256889401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_37
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30016d4084978210800000000000000
+      internalID: 1335199093313568831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_38
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513873003ef13ceb0800000000000000
+      internalID: -4700878526222990571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_39
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6dc08b5bdbf2420800000000000000
+      internalID: 2607511297445385968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_40
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 0
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68654fe3292106940800000000000000
+      internalID: 5287246381863687814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_41
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf20e8df6da33b20800000000000000
+      internalID: 3113022463334690742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_42
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 41
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae6e6421ab9e15f0800000000000000
+      internalID: -784018168712630619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raiser_anim_big_43
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82be1a39b39dfe830800000000000000
+      internalID: 4102736635460971304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
