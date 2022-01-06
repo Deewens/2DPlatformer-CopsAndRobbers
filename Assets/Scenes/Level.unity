@@ -3102,10 +3102,10 @@ GameObject:
   - component: {fileID: 1784051001}
   - component: {fileID: 1784051004}
   - component: {fileID: 1784051003}
-  - component: {fileID: 1784051002}
   - component: {fileID: 1784051000}
   - component: {fileID: 1784050999}
   - component: {fileID: 1784051005}
+  - component: {fileID: 1784051002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3210,7 +3210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animState: 0
-  horizontalsSpeed: 5
+  horizontalsSpeed: 2.5
   jumpVerticalPushOff: 5
   groundLayer:
     serializedVersion: 2

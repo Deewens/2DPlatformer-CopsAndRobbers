@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator _animator;
     private Rigidbody2D _rb;
-    private BoxCollider2D _boxCollider;
+    private CapsuleCollider2D _capsuleCollider;
 
     public AnimStates animState;
     private static readonly int State = Animator.StringToHash("State");
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-        _boxCollider = GetComponent<BoxCollider2D>();
+        _capsuleCollider = GetComponent<CapsuleCollider2D>();
 
         _savedlocalScale = transform.localScale;
     }
@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour
         _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
         _animator.SetInteger(State, (int)animState);
         
-        /*if (IsGrounded()) stateDebugText.SetText("Grounded");
-        else stateDebugText.SetText("Not grounded");*/
+        if (IsGrounded()) stateDebugText.SetText("Grounded");
+        else stateDebugText.SetText("Not grounded");
     }
 
     /*
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
     /// <returns>boolean indicating if the player is grounded</returns>
     private bool IsGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(_boxCollider.bounds.center, _boxCollider.bounds.size, 0,
+        RaycastHit2D raycastHit = Physics2D.BoxCast(_capsuleCollider.bounds.center, _capsuleCollider.bounds.size, 0,
             Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
