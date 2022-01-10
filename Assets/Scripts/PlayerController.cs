@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // what do the below lines do ?
-        // They are changing the faced direction of the cat
+        // They are changing the faced direction of the player
         if (_horizontalInput > 0.001f)
             transform.localScale = new Vector2(_savedlocalScale.x, _savedlocalScale.y);
         else if (_horizontalInput < -0.001f)
