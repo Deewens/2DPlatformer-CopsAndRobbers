@@ -11,9 +11,12 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rb;
     private CapsuleCollider2D _capsuleCollider;
+    
+    private bool _isFacingRight = true;  // For determining which way the player is currently facing.
 
     public AnimStates animState;
     private static readonly int State = Animator.StringToHash("State");
+    private static readonly int IsArmed = Animator.StringToHash("isArmed");
 
     public float horizontalsSpeed;
     public float jumpVerticalPushOff;
@@ -31,24 +34,24 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
         _capsuleCollider = GetComponent<CapsuleCollider2D>();
+        
+        _animator.SetBool(IsArmed, true);
 
         _savedlocalScale = transform.localScale;
     }
 
     private void Update()
     {
-        // what do the below lines do ?
-        // They are changing the faced direction of the player
-        if (_horizontalInput > 0.001f)
-            transform.localScale = new Vector2(_savedlocalScale.x, _savedlocalScale.y);
-        else if (_horizontalInput < -0.001f)
-            transform.localScale = new Vector2(-_savedlocalScale.x, _savedlocalScale.y);
+        if (_horizontalInput > 0.001f && !_isFacingRight)
+            FlipFacedDirection();
+        else if (_horizontalInput < -0.001f && _isFacingRight)
+            FlipFacedDirection();
 
         switch (animState)
         {
             case AnimStates.Running:
                 if (_horizontalInput == 0) animState = AnimStates.Idle;
-                break;
+                    break;
             case AnimStates.Jumping:
                 if (_rb.velocity.y < 0)
                     if (IsGrounded())
@@ -74,7 +77,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
         _horizontalInput = movementVector.x;
-        animState = AnimStates.Running;
+        if (IsGrounded()) animState = AnimStates.Running;
     }
 
     private void OnJump()
@@ -95,5 +98,14 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(_capsuleCollider.bounds.center, _capsuleCollider.bounds.size, 0,
             Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
+    }
+
+    /// <summary>
+    /// Change the faced direction of the player
+    /// </summary>
+    private void FlipFacedDirection()
+    {
+        _isFacingRight = !_isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }

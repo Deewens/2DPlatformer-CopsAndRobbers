@@ -1,0 +1,672 @@
+fileFormatVersion: 2
+guid: 4a63af0756d3635438ab04ebb18be499
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5155423164140863868
+    second: blueguard_anim_big_0
+  - first:
+      213: -936685313519324455
+    second: blueguard_anim_big_1
+  - first:
+      213: -1299633801477605210
+    second: blueguard_anim_big_2
+  - first:
+      213: -7846730342122870524
+    second: blueguard_anim_big_3
+  - first:
+      213: -3224748272081707945
+    second: blueguard_anim_big_4
+  - first:
+      213: -6242214405297900489
+    second: blueguard_anim_big_5
+  - first:
+      213: -7304522733696992688
+    second: blueguard_anim_big_6
+  - first:
+      213: 3118805939364752171
+    second: blueguard_anim_big_7
+  - first:
+      213: -8518043469289487704
+    second: blueguard_anim_big_8
+  - first:
+      213: -868426771217737857
+    second: blueguard_anim_big_9
+  - first:
+      213: -6243019224023855016
+    second: blueguard_anim_big_10
+  - first:
+      213: -896013560525006823
+    second: blueguard_anim_big_11
+  - first:
+      213: 3201226321526233144
+    second: blueguard_anim_big_12
+  - first:
+      213: 1798481247583501198
+    second: blueguard_anim_big_13
+  - first:
+      213: -2271566173618685604
+    second: blueguard_anim_big_14
+  - first:
+      213: 3599739958924866788
+    second: blueguard_anim_big_15
+  - first:
+      213: 6785058961380841696
+    second: blueguard_anim_big_16
+  - first:
+      213: -7882864564591966701
+    second: blueguard_anim_big_17
+  - first:
+      213: -2264053349603453138
+    second: blueguard_anim_big_18
+  - first:
+      213: 7786995292961180646
+    second: blueguard_anim_big_19
+  - first:
+      213: -5417329300199312121
+    second: blueguard_anim_big_20
+  - first:
+      213: 5970774064141969833
+    second: blueguard_anim_big_21
+  - first:
+      213: -4625517474002749269
+    second: blueguard_anim_big_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blueguard_anim_big_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 130
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71cf6d9d0ebb8740800000000000000
+      internalID: 5155423164140863868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 130
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2fa5d8ba93003f0800000000000000
+      internalID: -936685313519324455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 130
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a836dc71f5c6fde0800000000000000
+      internalID: -1299633801477605210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 130
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409ac7dd350da1390800000000000000
+      internalID: -7846730342122870524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 130
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cd38038846f33d0800000000000000
+      internalID: -3224748272081707945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 130
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734746032133f59a0800000000000000
+      internalID: -6242214405297900489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 130
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ab934564f11aa90800000000000000
+      internalID: -7304522733696992688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_7
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 130
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2be63b4a79384b20800000000000000
+      internalID: 3118805939364752171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_8
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 129
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a20aaf5894d9c980800000000000000
+      internalID: -8518043469289487704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 65
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f779024e37ab2f3f0800000000000000
+      internalID: -868426771217737857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8509f1ab7175c59a0800000000000000
+      internalID: -6243019224023855016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91859faf968b093f0800000000000000
+      internalID: -896013560525006823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 65
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838933ce06a0d6c20800000000000000
+      internalID: 3201226321526233144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_13
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 65
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b7a697a2d75f810800000000000000
+      internalID: 1798481247583501198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_14
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c593aa1b996c970e0800000000000000
+      internalID: -2271566173618685604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4fe7f9b68d4f130800000000000000
+      internalID: 3599739958924866788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_16
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 65
+        width: 61
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e89f253d2f592e50800000000000000
+      internalID: 6785058961380841696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 65
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3164bf691707a9290800000000000000
+      internalID: -7882864564591966701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_18
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 65
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e275a5859777490e0800000000000000
+      internalID: -2264053349603453138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_19
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 65
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb079036f6f01c60800000000000000
+      internalID: 7786995292961180646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_20
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 65
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705fd4624b7c1d4b0800000000000000
+      internalID: -5417329300199312121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_21
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 65
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a92c4770637cd250800000000000000
+      internalID: 5970774064141969833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueguard_anim_big_22
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba834bb4d5cdecfb0800000000000000
+      internalID: -4625517474002749269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

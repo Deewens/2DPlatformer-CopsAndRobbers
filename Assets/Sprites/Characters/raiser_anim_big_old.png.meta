@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4719a3050228d9842aa9c19d0e7739aa
+guid: 6c14fed95c9e97e45a9102d05abc1998
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -132,8 +132,8 @@ TextureImporter:
       213: -784018168712630619
     second: raiser_anim_big_42
   - first:
-      213: -7122580018106738559
-    second: raiser_anim_big_44
+      213: 4102736635460971304
+    second: raiser_anim_big_43
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -164,7 +164,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -200,7 +200,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -212,7 +212,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -224,7 +224,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -387,7 +387,7 @@ TextureImporter:
         serializedVersion: 2
         x: 453
         y: 257
-        width: 79
+        width: 59
         height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -574,10 +574,10 @@ TextureImporter:
       name: raiser_anim_big_16
       rect:
         serializedVersion: 2
-        x: 523
-        y: 194
-        width: 38
-        height: 61
+        x: 4
+        y: 129
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,10 +595,10 @@ TextureImporter:
       name: raiser_anim_big_17
       rect:
         serializedVersion: 2
-        x: 4
+        x: 76
         y: 129
-        width: 50
-        height: 53
+        width: 59
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,9 +616,9 @@ TextureImporter:
       name: raiser_anim_big_18
       rect:
         serializedVersion: 2
-        x: 76
+        x: 146
         y: 129
-        width: 59
+        width: 33
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -637,10 +637,10 @@ TextureImporter:
       name: raiser_anim_big_19
       rect:
         serializedVersion: 2
-        x: 146
+        x: 189
         y: 129
-        width: 33
-        height: 54
+        width: 59
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -658,9 +658,9 @@ TextureImporter:
       name: raiser_anim_big_20
       rect:
         serializedVersion: 2
-        x: 189
+        x: 261
         y: 129
-        width: 59
+        width: 51
         height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -679,10 +679,10 @@ TextureImporter:
       name: raiser_anim_big_21
       rect:
         serializedVersion: 2
-        x: 261
+        x: 337
         y: 129
-        width: 51
-        height: 53
+        width: 36
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -700,10 +700,10 @@ TextureImporter:
       name: raiser_anim_big_22
       rect:
         serializedVersion: 2
-        x: 337
+        x: 402
         y: 129
-        width: 36
-        height: 54
+        width: 35
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -721,10 +721,10 @@ TextureImporter:
       name: raiser_anim_big_23
       rect:
         serializedVersion: 2
-        x: 402
+        x: 453
         y: 129
-        width: 35
-        height: 56
+        width: 49
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -742,10 +742,10 @@ TextureImporter:
       name: raiser_anim_big_24
       rect:
         serializedVersion: 2
-        x: 453
-        y: 129
-        width: 49
-        height: 57
+        x: 526
+        y: 128
+        width: 38
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -763,10 +763,10 @@ TextureImporter:
       name: raiser_anim_big_25
       rect:
         serializedVersion: 2
-        x: 526
-        y: 128
-        width: 38
-        height: 62
+        x: 10
+        y: 65
+        width: 49
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -784,10 +784,10 @@ TextureImporter:
       name: raiser_anim_big_26
       rect:
         serializedVersion: 2
-        x: 10
+        x: 75
         y: 65
-        width: 49
-        height: 58
+        width: 35
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -805,10 +805,10 @@ TextureImporter:
       name: raiser_anim_big_27
       rect:
         serializedVersion: 2
-        x: 75
+        x: 139
         y: 65
-        width: 35
-        height: 56
+        width: 36
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -826,10 +826,10 @@ TextureImporter:
       name: raiser_anim_big_28
       rect:
         serializedVersion: 2
-        x: 139
+        x: 200
         y: 65
-        width: 36
-        height: 54
+        width: 51
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -847,9 +847,9 @@ TextureImporter:
       name: raiser_anim_big_29
       rect:
         serializedVersion: 2
-        x: 200
+        x: 264
         y: 65
-        width: 51
+        width: 59
         height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -868,10 +868,10 @@ TextureImporter:
       name: raiser_anim_big_30
       rect:
         serializedVersion: 2
-        x: 264
+        x: 333
         y: 65
-        width: 59
-        height: 53
+        width: 33
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -889,9 +889,9 @@ TextureImporter:
       name: raiser_anim_big_31
       rect:
         serializedVersion: 2
-        x: 333
+        x: 377
         y: 65
-        width: 33
+        width: 59
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -910,10 +910,10 @@ TextureImporter:
       name: raiser_anim_big_32
       rect:
         serializedVersion: 2
-        x: 377
+        x: 458
         y: 65
-        width: 59
-        height: 54
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -931,10 +931,10 @@ TextureImporter:
       name: raiser_anim_big_33
       rect:
         serializedVersion: 2
-        x: 458
-        y: 65
-        width: 50
-        height: 53
+        x: 526
+        y: 38
+        width: 38
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -952,10 +952,10 @@ TextureImporter:
       name: raiser_anim_big_34
       rect:
         serializedVersion: 2
-        x: 526
-        y: 60
-        width: 38
-        height: 58
+        x: 16
+        y: 0
+        width: 37
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -973,10 +973,10 @@ TextureImporter:
       name: raiser_anim_big_35
       rect:
         serializedVersion: 2
-        x: 16
+        x: 78
         y: 0
-        width: 37
-        height: 61
+        width: 41
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -994,7 +994,7 @@ TextureImporter:
       name: raiser_anim_big_36
       rect:
         serializedVersion: 2
-        x: 78
+        x: 140
         y: 0
         width: 41
         height: 59
@@ -1015,10 +1015,10 @@ TextureImporter:
       name: raiser_anim_big_37
       rect:
         serializedVersion: 2
-        x: 140
+        x: 205
         y: 0
-        width: 41
-        height: 59
+        width: 37
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1036,10 +1036,10 @@ TextureImporter:
       name: raiser_anim_big_38
       rect:
         serializedVersion: 2
-        x: 205
+        x: 257
         y: 0
-        width: 37
-        height: 61
+        width: 59
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1057,7 +1057,7 @@ TextureImporter:
       name: raiser_anim_big_39
       rect:
         serializedVersion: 2
-        x: 257
+        x: 324
         y: 0
         width: 59
         height: 56
@@ -1078,10 +1078,10 @@ TextureImporter:
       name: raiser_anim_big_40
       rect:
         serializedVersion: 2
-        x: 324
+        x: 389
         y: 0
-        width: 59
-        height: 56
+        width: 53
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1099,7 +1099,7 @@ TextureImporter:
       name: raiser_anim_big_41
       rect:
         serializedVersion: 2
-        x: 389
+        x: 450
         y: 0
         width: 53
         height: 53
@@ -1120,10 +1120,10 @@ TextureImporter:
       name: raiser_anim_big_42
       rect:
         serializedVersion: 2
-        x: 450
-        y: 0
-        width: 53
-        height: 53
+        x: 532
+        y: 41
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1138,13 +1138,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: raiser_anim_big_44
+      name: raiser_anim_big_43
       rect:
         serializedVersion: 2
         x: 522
         y: 0
         width: 44
-        height: 53
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1152,8 +1152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 188d378e533872d90800000000000000
-      internalID: -7122580018106738559
+      spriteID: 82be1a39b39dfe830800000000000000
+      internalID: 4102736635460971304
       vertices: []
       indices: 
       edges: []
