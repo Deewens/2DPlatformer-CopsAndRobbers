@@ -32,6 +32,9 @@ public class EnemyController : MonoBehaviour
         _dir = (Vector2) transform.position - _previousDir;
         _previousDir = transform.position;
 
+
+
+
         // Change faced direction of the sprite
         if (_dir.x < 0.0) // Move to the right
             transform.localScale = new Vector2(_savedLocalState.x, _savedLocalState.y);
