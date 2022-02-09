@@ -109,8 +109,19 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
-    public void buffDefense()
+    //these are triggered by the pickups
+    public void ShieldPlayer()
     {
-        Debug.Log("defenseUp");
+        Debug.Log("Shield");
+    }
+
+    public void BoostDamage()
+    {
+        Debug.Log("Power");
+    }
+
+    public void Heal()
+    {
+        Debug.Log("Heal");
     }
 }

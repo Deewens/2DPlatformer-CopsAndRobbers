@@ -24,11 +24,13 @@ public class PickupController : MonoBehaviour
             switch(boost)
             {
                 case PickupType.health:
+                    player.Heal();
                     break;
                 case PickupType.damage:
+                    player.BoostDamage();
                     break;
                 case PickupType.defense:
-                    player.buffDefense();
+                    player.ShieldPlayer();
                     break;
             }
             
