@@ -108,4 +108,9 @@ public class PlayerController : MonoBehaviour
         _isFacingRight = !_isFacingRight;
         transform.Rotate(0f, 180f, 0f);
     }
+
+    public void buffDefense()
+    {
+        Debug.Log("defenseUp");
+    }
 }
