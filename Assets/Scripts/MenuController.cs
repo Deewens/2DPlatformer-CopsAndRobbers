@@ -7,7 +7,7 @@ public class MenuController : MonoBehaviour
 
     public void loadGameplay()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void loadStageOption()
