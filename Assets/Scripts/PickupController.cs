@@ -21,10 +21,12 @@ public class PickupController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player != null)
+        if (collision.CompareTag("Player"))
         {
-            switch(boost)
+            if (player != null)
             {
+                switch (boost)
+                {
                 case PickupType.health:
                     player.Heal();
                     break;
@@ -34,8 +36,9 @@ public class PickupController : MonoBehaviour
                 case PickupType.defense:
                     StartCoroutine(player.ShieldPlayer());
                     break;
+                }
             }
-            
+            this.gameObject.SetActive(false);
         }
         rend.enabled = false;
         this.gameObject.GetComponent<Collider2D>().enabled = false;
