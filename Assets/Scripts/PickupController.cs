@@ -19,22 +19,25 @@ public class PickupController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player != null)
+        if (collision.CompareTag("Player"))
         {
-            switch(boost)
+            if (player != null)
             {
-                case PickupType.health:
-                    player.Heal();
-                    break;
-                case PickupType.damage:
-                    player.BoostDamage();
-                    break;
-                case PickupType.defense:
-                    player.ShieldPlayer();
-                    break;
+                switch (boost)
+                {
+                    case PickupType.health:
+                        player.Heal();
+                        break;
+                    case PickupType.damage:
+                        player.BoostDamage();
+                        break;
+                    case PickupType.defense:
+                        player.ShieldPlayer();
+                        break;
+                }
+
             }
-            
+            this.gameObject.SetActive(false);
         }
-        this.gameObject.SetActive(false);
     }
 }

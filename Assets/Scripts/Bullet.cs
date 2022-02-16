@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player")) return;
+        if (col.CompareTag("Player") || col.CompareTag("Pickup")) return;
         
         if (col.CompareTag("Enemy"))
         {
