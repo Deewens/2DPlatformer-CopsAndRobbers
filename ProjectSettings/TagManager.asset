@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Police Drone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Obstacle
   - Water
   - UI
   - Player

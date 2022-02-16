@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     
     private bool _isFacingRight = true;  // For determining which way the player is currently facing.
 
-    public AnimStates animState;
+    public PlayerAnimStates playerAnimState;
     private static readonly int State = Animator.StringToHash("State");
     private static readonly int IsArmed = Animator.StringToHash("isArmed");
 
@@ -47,24 +47,24 @@ public class PlayerController : MonoBehaviour
         else if (_horizontalInput < -0.001f && _isFacingRight)
             FlipFacedDirection();
 
-        switch (animState)
+        switch (playerAnimState)
         {
-            case AnimStates.Running:
-                if (_horizontalInput == 0) animState = AnimStates.Idle;
+            case PlayerAnimStates.Running:
+                if (_horizontalInput == 0) playerAnimState = PlayerAnimStates.Idle;
                     break;
-            case AnimStates.Jumping:
+            case PlayerAnimStates.Jumping:
                 if (_rb.velocity.y < 0)
                     if (IsGrounded())
                     {
-                        if (_horizontalInput > 0.001f || _horizontalInput < -0.001f) animState = AnimStates.Running;
-                        else animState = AnimStates.Idle;
+                        if (_horizontalInput > 0.001f || _horizontalInput < -0.001f) playerAnimState = PlayerAnimStates.Running;
+                        else playerAnimState = PlayerAnimStates.Idle;
                     }
                 break;
         }
 
         //_rb.AddForce(new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y), ForceMode2D.Impulse);
         _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
-        _animator.SetInteger(State, (int)animState);
+        _animator.SetInteger(State, (int)playerAnimState);
         
         if (IsGrounded()) stateDebugText.SetText("Grounded");
         else stateDebugText.SetText("Not grounded");
@@ -77,14 +77,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
         _horizontalInput = movementVector.x;
-        if (IsGrounded()) animState = AnimStates.Running;
+        if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
     }
 
     private void OnJump()
     {
         if (IsGrounded())
         {
-            animState = AnimStates.Jumping;
+            playerAnimState = PlayerAnimStates.Jumping;
             _rb.velocity = new Vector2(_rb.velocity.x, jumpVerticalPushOff);
         }
     }
