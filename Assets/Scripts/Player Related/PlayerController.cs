@@ -8,6 +8,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public GameObject Shield;
+    public bool firepower;
+
     private Animator _animator;
     private Rigidbody2D _rb;
     private CapsuleCollider2D _capsuleCollider;
@@ -29,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshProUGUI stateDebugText;
 
+    public int _health;
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -38,6 +43,19 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool(IsArmed, true);
 
         _savedlocalScale = transform.localScale;
+    }
+
+    public void SavePlayer()
+    {
+        //SaveSystem.SaveGameData(this);
+    }
+
+    public void LoadPlayer()
+    {
+        GameData data = SaveSystem.LoadGameData();
+
+        transform.position = new Vector3(data.positionPlayer[0], data.positionPlayer[1], data.positionPlayer[2]);
+        _health = data.health;
     }
 
     private void Update()
@@ -110,18 +128,23 @@ public class PlayerController : MonoBehaviour
     }
 
     //these are triggered by the pickups
-    public void ShieldPlayer()
+
+    public IEnumerator ShieldPlayer()
     {
-        Debug.Log("Shield");
+        Shield.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        Shield.SetActive(false);
     }
 
-    public void BoostDamage()
+    public IEnumerator BoostDamage()
     {
-        Debug.Log("Power");
+        firepower = true;
+        yield return new WaitForSeconds(5f);
+        firepower = false;
     }
 
     public void Heal()
     {
-        Debug.Log("Heal");
+        _health++;
     }
 }
