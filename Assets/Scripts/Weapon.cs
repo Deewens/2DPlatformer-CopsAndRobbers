@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
     }
-    private void OnFire()
+    public void OnFire()
     {
         Shoot();
     }

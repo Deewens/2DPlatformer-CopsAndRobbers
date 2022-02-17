@@ -12,17 +12,21 @@ public class PickupController : MonoBehaviour
     }
     private PlayerController player;
     public PickupType boost;
+    private Renderer rend;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        rend = GetComponent<SpriteRenderer>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player != null)
+        if (collision.CompareTag("Player"))
         {
-            switch(boost)
+            if (player != null)
             {
+                switch (boost)
+                {
                 case PickupType.health:
                     player.Heal();
                     break;
@@ -30,11 +34,14 @@ public class PickupController : MonoBehaviour
                     player.BoostDamage();
                     break;
                 case PickupType.defense:
-                    player.ShieldPlayer();
+                    StartCoroutine(player.ShieldPlayer());
                     break;
+                }
             }
-            
+            this.gameObject.SetActive(false);
         }
-        this.gameObject.SetActive(false);
+        rend.enabled = false;
+        this.gameObject.GetComponent<Collider2D>().enabled = false;
+        Destroy(gameObject, 10);
     }
 }
