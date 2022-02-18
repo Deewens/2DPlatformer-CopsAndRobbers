@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour
 
     void Initialize()
     {
-        SaveGameManager.enemies.Add(this);
+        SaveSystem.enemies.Add(this);
     }
 
     // Start is called before the first frame update
