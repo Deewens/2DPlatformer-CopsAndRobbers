@@ -27,13 +27,15 @@ public class PlayerController : MonoBehaviour
 
     private float _horizontalInput;
 
-    Vector2 _savedlocalScale;
-
     public LayerMask groundLayer;
 
     public TextMeshProUGUI stateDebugText;
 
-    public int _health;
+    [SerializeField] private int maxHealth;
+    private int _currentHealth;
+
+    public int CurrentHealth => _currentHealth;
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -42,7 +44,7 @@ public class PlayerController : MonoBehaviour
         
         _animator.SetBool(IsArmed, true);
 
-        _savedlocalScale = transform.localScale;
+        _currentHealth = maxHealth;
     }
 
     public void SavePlayer()
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
         GameData data = SaveSystem.LoadGameData();
 
         transform.position = new Vector3(data.positionPlayer[0], data.positionPlayer[1], data.positionPlayer[2]);
-        _health = data.health;
+        _currentHealth = data.health;
     }
 
     private void Update()
@@ -83,9 +85,6 @@ public class PlayerController : MonoBehaviour
         //_rb.AddForce(new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y), ForceMode2D.Impulse);
         _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
         _animator.SetInteger(State, (int)playerAnimState);
-        
-        if (IsGrounded()) stateDebugText.SetText("Grounded");
-        else stateDebugText.SetText("Not grounded");
     }
 
     /*
@@ -151,7 +150,17 @@ public class PlayerController : MonoBehaviour
 
     public void Heal()
     {
-        _health++;
+        _currentHealth++;
+    }
+
+    public void RemoveHealth(int amount)
+    {
+        _currentHealth -= amount;
+        if (_currentHealth <= 0)
+        {
+            _currentHealth = 0;
+            GameController.instance.RestartLevel();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

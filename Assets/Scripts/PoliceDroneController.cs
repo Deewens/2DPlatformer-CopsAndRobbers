@@ -28,6 +28,12 @@ public class PoliceDroneController : MonoBehaviour
 
     [SerializeField] private float fireRate = 1;
     private float _nextShootTime;
+    
+    [SerializeField] private int maxHealth = 100;
+    private int _currentHealth;
+    
+    public int CurrentHealth => _currentHealth;
+
 
     private void Start()
     {
@@ -82,9 +88,17 @@ public class PoliceDroneController : MonoBehaviour
     private void FlipFacedDirection()
     {
         _isFacingRight = !_isFacingRight;
-        
-        /*if (_isFacingRight) _aiPath.rotation = quaternion.Euler(0, 0, 0);
-        else _aiPath.rotation = Quaternion.Euler(0f, 180, 0f);*/
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    public void RemoveHealth(int amount)
+    {
+        _currentHealth -= amount;
+        if (_currentHealth <= 0)
+        {
+            _currentHealth = 0;
+            GameController.instance.updateScore(10);
+            Destroy(gameObject);
+        }
     }
 }

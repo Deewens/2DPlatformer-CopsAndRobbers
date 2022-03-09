@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.24
+  radius: 0.5
   height: 2
   canMove: 1
   maxSpeed: 2
@@ -131,7 +131,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 1
-  endReachedDistance: 1.5
+  endReachedDistance: 2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   missile: {fileID: 1271223173202824737, guid: 206f99cd1b6e3794692a3b50791e5dc3, type: 3}
   animState: 0
   fireRate: 2
+  maxHealth: 100
 --- !u!1 &2304137971534288528
 GameObject:
   m_ObjectHideFlags: 0
