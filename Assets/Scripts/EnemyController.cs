@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     public float speed = 2;
     public int health = 100;
     
-    public AnimStates animState;
+    public BlueguardAnimStates blueguardAnimState;
     private static readonly int State = Animator.StringToHash("State");
 
     private Rigidbody2D _rb;
@@ -46,9 +46,6 @@ public class EnemyController : MonoBehaviour
         _dir = (Vector2) transform.position - _previousDir;
         _previousDir = transform.position;
 
-
-
-
         // Change faced direction of the sprite
         if (_dir.x < 0.0) // Move to the right
             transform.localScale = new Vector2(_savedLocalState.x, _savedLocalState.y);
@@ -56,10 +53,10 @@ public class EnemyController : MonoBehaviour
         if (_dir.x > 0.0) // Move to the left
             transform.localScale = new Vector2(-_savedLocalState.x, _savedLocalState.y);
 
-        if (_dir.magnitude > 0.0) animState = AnimStates.Running;
-        else animState = AnimStates.Idle;
+        if (_dir.magnitude > 0.0) blueguardAnimState = BlueguardAnimStates.Running;
+        else blueguardAnimState = BlueguardAnimStates.Idle;
         
-        _animator.SetInteger(State, (int) animState);
+        _animator.SetInteger(State, (int) blueguardAnimState);
     }
 
     public void TakeDamage(int amount)

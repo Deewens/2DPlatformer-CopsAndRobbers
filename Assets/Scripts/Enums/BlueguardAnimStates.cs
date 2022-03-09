@@ -1,6 +1,6 @@
 namespace Enums
 {
-    public enum AnimStates
+    public enum BlueguardAnimStates
     {
         Idle = 0,
         Running = 1,
