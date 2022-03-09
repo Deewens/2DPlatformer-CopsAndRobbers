@@ -41,7 +41,7 @@ public class PickupController : MonoBehaviour
                         break;
                     case PickupType.coin:
                         Debug.Log("Got money");
-                        GameController.instance.updateScore(100);
+                        //GameController.instance.updateScore(100);
                         break;
                 }
             }
