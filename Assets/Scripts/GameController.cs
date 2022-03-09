@@ -41,4 +41,9 @@ public class GameController : MonoBehaviour
         score += t_score;
         HighScoreScript.instance.currentScore = score;
     }
+
+    public int getScore()
+    {
+        return score;
+    }
 }
