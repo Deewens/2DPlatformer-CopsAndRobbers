@@ -15,6 +15,11 @@ public class PickupController : MonoBehaviour
     public PickupType boost;
     private Renderer rend;
 
+    private void Awake()
+    {
+        SaveSystem.pickups.Add(this);
+    }
+
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -40,8 +45,10 @@ public class PickupController : MonoBehaviour
                         StartCoroutine(player.ShieldPlayer());
                         break;
                     case PickupType.coin:
-                        Debug.Log("Got money");
-                        GameController.instance.updateScore(100);
+                        if (GameController.instance != null)
+                        {
+                            GameController.instance.updateScore(100);
+                        }
                         break;
                 }
             }

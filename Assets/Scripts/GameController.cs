@@ -16,6 +16,16 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
+    public GameController Instance()
+    {
+        if (instance == null)
+        {
+            return instance = this;
+        }
+
+        return instance;
+    }
+
     public void changeLevel()
     {
         sceneIndex++;

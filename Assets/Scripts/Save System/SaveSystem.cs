@@ -20,6 +20,7 @@ public static class SaveSystem
     //    stream.Close();
     //}
     public static List<EnemyController> enemies = new List<EnemyController>();
+    public static List<PickupController> pickups = new List<PickupController>();
     const string SAVE_SUB = "/gameSave.Saves";
 
     public static void SaveGameData(PlayerController player, EnemyController enemy)
@@ -38,7 +39,7 @@ public static class SaveSystem
 
     public static GameData LoadGameData()
     {
-        string path = Application.persistentDataPath + "/gameSave.Saves" + SceneManager.GetActiveScene().buildIndex;
+        string path = Application.persistentDataPath + SAVE_SUB + SceneManager.GetActiveScene().buildIndex;
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

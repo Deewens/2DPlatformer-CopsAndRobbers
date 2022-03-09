@@ -16,5 +16,6 @@ public class DroneMissileController : MonoBehaviour
     public void LaunchMissile(Vector2 direction)
     {
         _rb.AddForce(direction * launchSpeed);
+        Destroy(gameObject, 5f);
     }
 }

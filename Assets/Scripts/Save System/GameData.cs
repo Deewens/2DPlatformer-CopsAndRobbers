@@ -11,6 +11,7 @@ public class GameData
     public float[] positionPlayer = new float[3];
     public float[] positionEnemy = new float[3];
     public float[] positionCamera = new float[3];
+   // public float[] positionPickups = new float[3];
 
     public GameData(PlayerController player, EnemyController enemy)
     {
@@ -24,6 +25,10 @@ public class GameData
         positionEnemy[0] = enemy.transform.position.x;
         positionEnemy[1] = enemy.transform.position.y;
         positionEnemy[2] = enemy.transform.position.z;
+
+       //positionPickups[0] = pickup.transform.position.x;
+       //positionPickups[1] = pickup.transform.position.y;
+       //positionPickups[2] = pickup.transform.position.z;
 
         positionCamera[0] = Camera.main.transform.position.x;
         positionCamera[1] = Camera.main.transform.position.y;
