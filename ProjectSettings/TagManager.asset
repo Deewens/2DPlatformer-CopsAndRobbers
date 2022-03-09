@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Police Drone
   - Pickup
   - Obstacle
   - PosTextTag
@@ -16,7 +17,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Obstacle
   - Water
   - UI
   - Player
