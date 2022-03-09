@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
     public void Moving(Vector2 movement)
     {
         _horizontalInput = movement.x;
-        if (IsGrounded()) animState = AnimStates.Running;
+        if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
     }
 
     public void OnJump()

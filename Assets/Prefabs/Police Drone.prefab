@@ -188,11 +188,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cac8cc8a3ccef045a46f49be40aba4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agroDistance: 7.5
+  agroDistance: 5
   droneGfx: {fileID: 2304137971534288533}
   shootPoint: {fileID: 2304137969598485859}
-  missile: {fileID: 0}
+  missile: {fileID: 1271223173202824737, guid: 206f99cd1b6e3794692a3b50791e5dc3, type: 3}
   animState: 0
+  fireRate: 2
 --- !u!1 &2304137971534288528
 GameObject:
   m_ObjectHideFlags: 0
