@@ -10,6 +10,7 @@ public class PoliceDroneAI : MonoBehaviour
 
     [SerializeField] private float speed = 200;
     [SerializeField] private float nextWaypointDistance = 3;
+    [SerializeField] private float endReachedDistance;
 
     [SerializeField] private Transform droneGFX;
     
@@ -18,7 +19,7 @@ public class PoliceDroneAI : MonoBehaviour
     
     private Path _path;
     private int _currentWaypoint;
-    private bool reachedEndOfPath = false;
+    private bool _reachedEndOfPath = false;
     
     private Seeker _seeker;
     private Rigidbody2D _rb;
@@ -56,17 +57,15 @@ public class PoliceDroneAI : MonoBehaviour
 
         if (_currentWaypoint >= _path.vectorPath.Count)
         {
-            reachedEndOfPath = true;
+            _reachedEndOfPath = true;
             return;
         }
         else
-            reachedEndOfPath = false;
+            _reachedEndOfPath = false;
 
-        if (Vector2.Distance(target.position, transform.position) <= 2)
-        {
-            
-        }
-        
+        if (Vector2.Distance(target.position, transform.position) <= endReachedDistance)
+            _reachedEndOfPath = true;
+
         Vector2 direction = ((Vector2) _path.vectorPath[_currentWaypoint] - _rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
         _rb.AddForce(force);
