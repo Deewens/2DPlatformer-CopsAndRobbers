@@ -194,6 +194,7 @@ MonoBehaviour:
   missile: {fileID: 1271223173202824737, guid: 206f99cd1b6e3794692a3b50791e5dc3, type: 3}
   animState: 0
   fireRate: 2
+  maxHealth: 100
 --- !u!1 &2304137971534288528
 GameObject:
   m_ObjectHideFlags: 0
