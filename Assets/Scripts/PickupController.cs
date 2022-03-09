@@ -40,8 +40,7 @@ public class PickupController : MonoBehaviour
                         StartCoroutine(player.ShieldPlayer());
                         break;
                     case PickupType.coin:
-                        Debug.Log("Got money");
-                        GameController.instance.updateScore(100);
+                        //GameController.instance.updateScore(100);
                         break;
                 }
             }

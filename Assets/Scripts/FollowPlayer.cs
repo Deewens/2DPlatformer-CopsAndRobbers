@@ -6,13 +6,18 @@ public class FollowPlayer : MonoBehaviour
 {
     private GameObject _player;
     private EnemyController _enemyController;
+    
+    [SerializeField] private float shootDistance = 4f;
+    [SerializeField] private Transform shootPoint;
+    [SerializeField] private GameObject bullet;
 
+    [SerializeField] private float fireRate = 1;
+    private float _nextShootTime;
+    
     public LayerMask characterLayer;
 
     public Transform castPoint;
     public float _agroDistance;
-
-    bool _facingWest = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -26,27 +31,21 @@ public class FollowPlayer : MonoBehaviour
     {
         if (CanSeePlayer(_agroDistance))
         {
+            _enemyController.IsFollowPlayer = true;
             transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, _enemyController.speed * Time.deltaTime);
-        }
-
-        //// Follow the player if close to him
-        //if (Vector2.Distance(transform.position, _player.transform.position) < 7.5)
-        //{
-        //    transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, _enemyController.speed * Time.deltaTime);
-        //}
-    }
-
-    void ChasePlayer()
-    {
-        if (transform.position.x < _player.transform.position.x)
-        {
-            transform.localScale = new Vector2(1, 1);
-            _facingWest = false;
         }
         else
         {
-            transform.localScale = new Vector2(-1, 1);
-            _facingWest = true;
+            _enemyController.IsFollowPlayer = false;
+        }
+
+        if (CanSeePlayer(shootDistance))
+        {
+            if (Time.time > _nextShootTime)
+            {
+                Shoot();
+                _nextShootTime = Time.time + fireRate;
+            }
         }
     }
 
@@ -55,7 +54,7 @@ public class FollowPlayer : MonoBehaviour
         bool seePlayer = false;
         float castDist = distance;
 
-        if (_facingWest)
+        if (!_enemyController.IsFacingRight)
         {
             castDist = -distance;
         }
@@ -63,9 +62,7 @@ public class FollowPlayer : MonoBehaviour
         Vector2 endPos = castPoint.position + Vector3.right * castDist;
 
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("Player"));
-
-
-
+        
         if (hit.collider != null)
         {
             if (hit.collider.gameObject.CompareTag("Player"))
@@ -87,5 +84,14 @@ public class FollowPlayer : MonoBehaviour
 
 
         return seePlayer;
+    }
+    
+    private void Shoot()
+    {
+        var obj = Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
+        if (!_enemyController.IsFacingRight)
+        {
+            obj.transform.right = -obj.transform.right;
+        }
     }
 }

@@ -13,6 +13,8 @@ TagManager:
   - ScoreTextTag
   - NameTextTag
   - Exit
+  - Bullet
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX

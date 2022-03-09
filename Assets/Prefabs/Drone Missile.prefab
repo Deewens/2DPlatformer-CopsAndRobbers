@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4126025935687022672}
   - component: {fileID: 4858875056060558542}
   - component: {fileID: 5676122701265071297}
+  - component: {fileID: 3619339201900636858}
   - component: {fileID: 1271223173202824737}
   m_Layer: 0
   m_Name: Drone Missile
@@ -105,6 +106,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &3619339201900636858
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3078188420170449543}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.14, y: 0.04}
+    newSize: {x: 0.14, y: 0.04}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14, y: 0.04}
+  m_EdgeRadius: 0
 --- !u!114 &1271223173202824737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchSpeed: 1000
+  damage: 10
