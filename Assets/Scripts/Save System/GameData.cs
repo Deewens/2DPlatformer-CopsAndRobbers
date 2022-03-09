@@ -16,12 +16,12 @@ public class GameData
     public GameData(PlayerController player, EnemyController enemy)
     {
         //level = gameController;
-        health = player._health;
+        health = player.CurrentHealth;
         positionPlayer[0] = player.transform.position.x;
         positionPlayer[1] = player.transform.position.y;
         positionPlayer[2] = player.transform.position.z;
 
-        healthEnemy = enemy.health;
+        healthEnemy = enemy.CurrentHealth;
         positionEnemy[0] = enemy.transform.position.x;
         positionEnemy[1] = enemy.transform.position.y;
         positionEnemy[2] = enemy.transform.position.z;

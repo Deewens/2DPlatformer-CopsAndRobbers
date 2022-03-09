@@ -46,9 +46,19 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void updateScore(int t_score)
     {
         score += t_score;
         HighScoreScript.instance.currentScore = score;
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }
