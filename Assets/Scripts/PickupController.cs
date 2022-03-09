@@ -8,33 +8,47 @@ public class PickupController : MonoBehaviour
     {
         health,
         damage,
-        defense
+        defense,
+        coin
     }
     private PlayerController player;
     public PickupType boost;
+    private Renderer rend;
 
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        rend = GetComponent<SpriteRenderer>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (player != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            switch(boost)
+            Debug.Log("Collided with player");
+            if (player != null)
             {
-                case PickupType.health:
-                    player.Heal();
-                    break;
-                case PickupType.damage:
-                    player.BoostDamage();
-                    break;
-                case PickupType.defense:
-                    player.ShieldPlayer();
-                    break;
+                switch (boost)
+                {
+                    case PickupType.health:
+                        player.Heal();
+                        break;
+                    case PickupType.damage:
+                        player.BoostDamage();
+                        break;
+                    case PickupType.defense:
+                        StartCoroutine(player.ShieldPlayer());
+                        break;
+                    case PickupType.coin:
+                        Debug.Log("Got money");
+                        GameController.instance.updateScore(100);
+                        break;
+                }
             }
-            
+            this.gameObject.SetActive(false);
         }
-        this.gameObject.SetActive(false);
+        rend.enabled = false;
+        this.gameObject.GetComponent<Collider2D>().enabled = false;
+        Destroy(gameObject, 10);
     }
 }

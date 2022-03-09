@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 1755086301065311013}
   - component: {fileID: 1755086301065311015}
   - component: {fileID: 1755086301065311008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShieldPickup
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1755086301065311014
 Transform:
   m_ObjectHideFlags: 0

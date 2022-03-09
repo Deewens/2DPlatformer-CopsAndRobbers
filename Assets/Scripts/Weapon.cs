@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
     }
-    private void OnFire()
+    public void OnFire()
     {
         Shoot();
     }
@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
     private void playRandomGunSound()
     {
         source.clip = randomFiringSounds[Random.Range(0, randomFiringSounds.Length)];
-        source.volume = Random.Range(1 - volumeChangeMuliplier, 1);
+        source.volume = Random.Range(0.1f - volumeChangeMuliplier, 0.5f);
         source.pitch = Random.Range(1 - pitchChangeMuliplier, 1 + pitchChangeMuliplier);
         source.PlayOneShot(source.clip);
     }

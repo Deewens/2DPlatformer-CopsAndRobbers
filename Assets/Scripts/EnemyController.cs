@@ -18,12 +18,26 @@ public class EnemyController : MonoBehaviour
     private Vector2 _previousDir;
     private Vector2 _savedLocalState;
 
+    void Initialize()
+    {
+        SaveSystem.enemies.Add(this);
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _savedLocalState = transform.localScale;
+        Initialize();
+    }
+
+    public void LoadEnemy()
+    {
+        GameData data = SaveSystem.LoadGameData();
+
+        transform.position = new Vector3(data.positionEnemy[0], data.positionEnemy[1], data.positionEnemy[2]);
+        health = data.healthEnemy;
     }
 
     // Update is called once per frame
@@ -51,6 +65,7 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
+            GameController.instance.updateScore(10);
             Destroy(gameObject);
         }
     }

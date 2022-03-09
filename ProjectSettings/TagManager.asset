@@ -7,6 +7,12 @@ TagManager:
   - Ground
   - Enemy
   - Police Drone
+  - Pickup
+  - Obstacle
+  - PosTextTag
+  - ScoreTextTag
+  - NameTextTag
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -17,7 +23,7 @@ TagManager:
   - Player
   - Enemy
   - Action
-  - 
+  - Pickup
   - 
   - 
   - 
