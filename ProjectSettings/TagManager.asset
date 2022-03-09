@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - Pickup
   - Obstacle
+  - PosTextTag
+  - ScoreTextTag
+  - NameTextTag
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -18,7 +22,7 @@ TagManager:
   - Player
   - Enemy
   - Action
-  - 
+  - Pickup
   - 
   - 
   - 

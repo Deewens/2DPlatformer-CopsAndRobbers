@@ -68,6 +68,7 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
+            GameController.instance.updateScore(10);
             Destroy(gameObject);
         }
     }

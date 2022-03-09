@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /// <summary>
+        /// <summary>
     /// Raycast method to check if a game object is grounded
     /// </summary>
     /// <returns>boolean indicating if the player is grounded</returns>
@@ -153,4 +153,14 @@ public class PlayerController : MonoBehaviour
     {
         _health++;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Exit"))
+        {
+            GameController.instance.changeLevel();
+        }
+    }
+
+
 }
