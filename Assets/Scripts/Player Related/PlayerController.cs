@@ -85,9 +85,6 @@ public class PlayerController : MonoBehaviour
         //_rb.AddForce(new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y), ForceMode2D.Impulse);
         _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
         _animator.SetInteger(State, (int)playerAnimState);
-        
-        if (IsGrounded()) stateDebugText.SetText("Grounded");
-        else stateDebugText.SetText("Not grounded");
     }
 
     /*

@@ -21,6 +21,6 @@ public class GameUI : MonoBehaviour
     void Update()
     {
         scoreText.SetText("Score: " + game.getScore());
-        healthText.SetText("Health: " + player._health);
+        healthText.SetText("Health: " + player.CurrentHealth);
     }
 }
