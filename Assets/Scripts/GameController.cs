@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Player_Related;
@@ -17,6 +18,25 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Main Menu") return;
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        Debug.Log(mode);
+        
+        GameData data = SaveSystem.LoadGameData();
+        Debug.Log("Scene has been reloaded");
+        Debug.Log("Player position: {X: " + data.playerPosition[0] + ", Y: " + data.playerPosition[1] + "}");
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        
+        player.LoadPlayer(data.playerHealth, data.playerPosition);
+    }
+    
     public GameController Instance()
     {
         if (instance == null)
@@ -93,8 +113,5 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(data.currentSceneIdx, LoadSceneMode.Single);
         Debug.Log("Scene has been reloaded");
         Debug.Log("Player position: {X: " + data.playerPosition[0] + ", Y: " + data.playerPosition[1] + "}");
-        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        
-        player.LoadPlayer(data.playerHealth, data.playerPosition);
     }
 }
