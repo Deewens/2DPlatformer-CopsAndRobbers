@@ -10,6 +10,7 @@ public class GameData
 {
     public int currentSceneIdx;
     public int playerHealth;
+    public int playerScore;
     public float[] playerPosition;
 
     public EnemyData[] enemies;
@@ -20,6 +21,7 @@ public class GameData
         currentSceneIdx = SceneManager.GetActiveScene().buildIndex;
         
         playerHealth = player.CurrentHealth;
+        playerScore = GameController.instance.getScore();
         
         playerPosition = new float[2];
         playerPosition[0] = player.transform.position.x;

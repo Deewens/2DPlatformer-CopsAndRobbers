@@ -7,7 +7,7 @@ public class MenuController : MonoBehaviour
 
     public void loadGameplay()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         //SceneManager.LoadScene("End Scene");
 
     }
@@ -26,12 +26,12 @@ public class MenuController : MonoBehaviour
 
     public void loadLevel1()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         //GameController.instance.sceneIndex = 1;
     }
     public void loadLevel2()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level 2", LoadSceneMode.Single);
         //GameController.instance.sceneIndex = 2;
     }
 }

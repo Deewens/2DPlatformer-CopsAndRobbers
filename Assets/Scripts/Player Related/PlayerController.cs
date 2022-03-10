@@ -8,15 +8,14 @@ namespace Player_Related
 {
     public class PlayerController : MonoBehaviour
     {
-
         public GameObject Shield;
         public bool firepower;
 
         private Animator _animator;
         private Rigidbody2D _rb;
         private CapsuleCollider2D _capsuleCollider;
-    
-        private bool _isFacingRight = true;  // For determining which way the player is currently facing.
+
+        private bool _isFacingRight = true; // For determining which way the player is currently facing.
 
         public PlayerAnimStates playerAnimState;
         private static readonly int State = Animator.StringToHash("State");
@@ -42,7 +41,7 @@ namespace Player_Related
             _animator = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
             _capsuleCollider = GetComponent<CapsuleCollider2D>();
-        
+
             _animator.SetBool(IsArmed, true);
 
             _currentHealth = maxHealth;
@@ -51,31 +50,25 @@ namespace Player_Related
         public void LoadPlayer(int health, float[] position)
         {
             _currentHealth = health;
-        
+
             Vector2 newPlayerPos;
             newPlayerPos.x = position[0];
             newPlayerPos.y = position[1];
 
-            Debug.Log("Player position: {X: " + newPlayerPos[0] + ", Y: " + newPlayerPos[1] + "}");
-
             transform.position = newPlayerPos;
-            
-            Debug.Log("Player position AFTER: {X: " + transform.position.x + ", Y: " + transform.position.y + "}");
-
-
         }
 
-    private void Update()
-    {
-        if (Time.timeScale == 1)
+        private void Update()
         {
-            if (_horizontalInput > 0.001f && !_isFacingRight)
-                FlipFacedDirection();
-            else if (_horizontalInput < -0.001f && _isFacingRight)
-                FlipFacedDirection();
-        }
+            if (Time.timeScale == 1)
+            {
+                if (_horizontalInput > 0.001f && !_isFacingRight)
+                    FlipFacedDirection();
+                else if (_horizontalInput < -0.001f && _isFacingRight)
+                    FlipFacedDirection();
+            }
 
-        switch (playerAnimState)
+            switch (playerAnimState)
             {
                 case PlayerAnimStates.Running:
                     if (_horizontalInput == 0) playerAnimState = PlayerAnimStates.Idle;
@@ -84,13 +77,14 @@ namespace Player_Related
                     if (_rb.velocity.y < 0)
                         if (IsGrounded())
                         {
-                            if (_horizontalInput > 0.001f || _horizontalInput < -0.001f) playerAnimState = PlayerAnimStates.Running;
+                            if (_horizontalInput > 0.001f || _horizontalInput < -0.001f)
+                                playerAnimState = PlayerAnimStates.Running;
                             else playerAnimState = PlayerAnimStates.Idle;
                         }
+
                     break;
             }
 
-            //_rb.AddForce(new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y), ForceMode2D.Impulse);
             _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
             _animator.SetInteger(State, (int)playerAnimState);
         }
@@ -105,15 +99,15 @@ namespace Player_Related
             if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
         }
 
-    public void Moving(Vector2 movement)
-    {
-        if (Time.timeScale == 1)
+        public void Moving(Vector2 movement)
         {
-            _horizontalInput = movement.x;
-        }
+            if (Time.timeScale == 1)
+            {
+                _horizontalInput = movement.x;
+            }
 
-        if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
-    }
+            if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
+        }
 
         public void OnJump()
         {
@@ -146,14 +140,14 @@ namespace Player_Related
 
         //these are triggered by the pickups
 
-    public IEnumerator ShieldPlayer()
-    {
-        Shield.SetActive(true);
-        _invincibility = true;
-        yield return new WaitForSeconds(5f);
-        Shield.SetActive(false);
-        _invincibility = false;
-}
+        public IEnumerator ShieldPlayer()
+        {
+            Shield.SetActive(true);
+            _invincibility = true;
+            yield return new WaitForSeconds(5f);
+            Shield.SetActive(false);
+            _invincibility = false;
+        }
 
         public IEnumerator BoostDamage()
         {
@@ -163,10 +157,10 @@ namespace Player_Related
         }
 
 
-    public void Heal()
-    {
-        _currentHealth += 25;
-    }
+        public void Heal()
+        {
+            _currentHealth += 25;
+        }
 
 
         public void RemoveHealth(int amount)
@@ -193,7 +187,5 @@ namespace Player_Related
                 }
             }
         }
-
-
     }
 }

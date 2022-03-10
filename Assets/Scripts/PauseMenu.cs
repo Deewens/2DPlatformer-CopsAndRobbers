@@ -40,6 +40,11 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = !GameIsPaused;
     }
 
+    public void OnResume()
+    {
+        GameIsPaused = false;
+    }
+
     void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -60,7 +65,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        Resume();
+        GameIsPaused = false;
         GameController.instance.LoadSaveGame();
     }
 

@@ -6,11 +6,15 @@ using UnityEngine;
 public class OnScreenButtons : MonoBehaviour
 {
     private PlayerController player;
+    private PauseMenu _pauseMenu;
     private Weapon gun;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        player = playerObj.GetComponent<PlayerController>();
+        _pauseMenu = playerObj.GetComponent<PauseMenu>();
         gun = GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>();
     }
 
@@ -27,6 +31,11 @@ public class OnScreenButtons : MonoBehaviour
     public void Fire()
     {
         gun.OnFire();
+    }
+
+    public void Pause()
+    {
+        PauseMenu.GameIsPaused = !PauseMenu.GameIsPaused;
     }
 
 }
