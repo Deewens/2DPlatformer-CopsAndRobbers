@@ -27,6 +27,10 @@ public class DroneMissileController : MonoBehaviour
         if (!col.CompareTag("Player")) return;
 
         GameObject player = col.gameObject;
-        player.GetComponent<PlayerController>().RemoveHealth(damage);
+        if (player.GetComponent<PlayerController>()._invincibility == false)
+        {
+            player.GetComponent<PlayerController>().RemoveHealth(damage);
+        }
+        Destroy(gameObject);
     }
 }

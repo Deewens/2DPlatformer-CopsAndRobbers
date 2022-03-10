@@ -30,6 +30,8 @@ public class EnemyController : MonoBehaviour
 
     public LayerMask groundLayer;
 
+    public Collider2D wallCollider;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -67,7 +69,7 @@ public class EnemyController : MonoBehaviour
     private void Patrol()
     {
 
-        if (mustTurn)
+        if (mustTurn || wallCollider.IsTouchingLayers(groundLayer))
         {
             FlipFacedDirection();
         }

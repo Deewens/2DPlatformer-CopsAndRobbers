@@ -33,8 +33,9 @@ namespace Player_Related
 
         [SerializeField] private int maxHealth;
         private int _currentHealth;
-
         public int CurrentHealth => _currentHealth;
+        public bool _invincibility;
+
 
         private void Start()
         {
@@ -61,11 +62,20 @@ namespace Player_Related
             
             Debug.Log("Player position AFTER: {X: " + transform.position.x + ", Y: " + transform.position.y + "}");
 
+
         }
 
-        private void Update()
+    private void Update()
+    {
+        if (Time.timeScale == 1)
         {
             if (_horizontalInput > 0.001f && !_isFacingRight)
+                FlipFacedDirection();
+            else if (_horizontalInput < -0.001f && _isFacingRight)
+                FlipFacedDirection();
+        }
+
+        if (_horizontalInput > 0.001f && !_isFacingRight)
                 FlipFacedDirection();
             else if (_horizontalInput < -0.001f && _isFacingRight)
                 FlipFacedDirection();
@@ -91,8 +101,8 @@ namespace Player_Related
         }
 
         /*
-     * Input events handling
-    */
+         * Input events handling
+        */
         private void OnMove(InputValue movementValue)
         {
             Vector2 movementVector = movementValue.Get<Vector2>();
@@ -100,11 +110,15 @@ namespace Player_Related
             if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
         }
 
-        public void Moving(Vector2 movement)
+    public void Moving(Vector2 movement)
+    {
+        if (Time.timeScale == 1)
         {
             _horizontalInput = movement.x;
-            if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
         }
+
+        if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
+    }
 
         public void OnJump()
         {
@@ -137,12 +151,14 @@ namespace Player_Related
 
         //these are triggered by the pickups
 
-        public IEnumerator ShieldPlayer()
-        {
-            Shield.SetActive(true);
-            yield return new WaitForSeconds(5f);
-            Shield.SetActive(false);
-        }
+    public IEnumerator ShieldPlayer()
+    {
+        Shield.SetActive(true);
+        _invincibility = true;
+        yield return new WaitForSeconds(5f);
+        Shield.SetActive(false);
+        _invincibility = false;
+}
 
         public IEnumerator BoostDamage()
         {
@@ -151,10 +167,12 @@ namespace Player_Related
             firepower = false;
         }
 
-        public void Heal()
-        {
-            _currentHealth++;
-        }
+
+    public void Heal()
+    {
+        _currentHealth += 25;
+    }
+
 
         public void RemoveHealth(int amount)
         {
@@ -168,9 +186,14 @@ namespace Player_Related
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Exit"))
+
+            if (GameController.instance != null)
             {
                 GameController.instance.changeLevel();
+            }
+            else
+            {
+                Debug.Log("Collided with level exit");
             }
         }
 
