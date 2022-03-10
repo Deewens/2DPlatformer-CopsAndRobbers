@@ -65,31 +65,31 @@ namespace Player_Related
 
         }
 
-    private void Update()
-    {
-        if (Time.timeScale == 1)
+        private void Update()
         {
-            if (_horizontalInput > 0.001f && !_isFacingRight)
-                FlipFacedDirection();
-            else if (_horizontalInput < -0.001f && _isFacingRight)
-                FlipFacedDirection();
-        }
-
-        switch (playerAnimState)
+            if (Time.timeScale == 1)
             {
-                case PlayerAnimStates.Running:
-                    if (_horizontalInput == 0) playerAnimState = PlayerAnimStates.Idle;
-                    break;
-                case PlayerAnimStates.Jumping:
-                    if (_rb.velocity.y < 0)
-                        if (IsGrounded())
-                        {
-                            if (_horizontalInput > 0.001f || _horizontalInput < -0.001f) playerAnimState = PlayerAnimStates.Running;
-                            else playerAnimState = PlayerAnimStates.Idle;
-                        }
-                    break;
+                if (_horizontalInput > 0.001f && !_isFacingRight)
+                    FlipFacedDirection();
+                else if (_horizontalInput < -0.001f && _isFacingRight)
+                    FlipFacedDirection();
             }
 
+            switch (playerAnimState)
+                {
+                    case PlayerAnimStates.Running:
+                        if (_horizontalInput == 0) playerAnimState = PlayerAnimStates.Idle;
+                        break;
+                    case PlayerAnimStates.Jumping:
+                        if (_rb.velocity.y < 0)
+                            if (IsGrounded())
+                            {
+                                if (_horizontalInput > 0.001f || _horizontalInput < -0.001f) playerAnimState = PlayerAnimStates.Running;
+                                else playerAnimState = PlayerAnimStates.Idle;
+                            }
+                        break;
+                }
+            _rb.transform.position = _rb.transform.position;
             //_rb.AddForce(new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y), ForceMode2D.Impulse);
             _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
             _animator.SetInteger(State, (int)playerAnimState);
@@ -105,15 +105,15 @@ namespace Player_Related
             if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
         }
 
-    public void Moving(Vector2 movement)
-    {
-        if (Time.timeScale == 1)
+        public void Moving(Vector2 movement)
         {
-            _horizontalInput = movement.x;
-        }
+            if (Time.timeScale == 1)
+            {
+                _horizontalInput = movement.x;
+            }
 
-        if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
-    }
+            if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
+        }
 
         public void OnJump()
         {
@@ -146,27 +146,27 @@ namespace Player_Related
 
         //these are triggered by the pickups
 
-    public IEnumerator ShieldPlayer()
-    {
-        Shield.SetActive(true);
-        _invincibility = true;
-        yield return new WaitForSeconds(5f);
-        Shield.SetActive(false);
-        _invincibility = false;
+        public IEnumerator ShieldPlayer()
+        {
+            Shield.SetActive(true);
+            _invincibility = true;
+            yield return new WaitForSeconds(5f);
+            Shield.SetActive(false);
+            _invincibility = false;
 }
 
-        public IEnumerator BoostDamage()
+            public IEnumerator BoostDamage()
+            {
+                firepower = true;
+                yield return new WaitForSeconds(5f);
+                firepower = false;
+            }
+
+
+        public void Heal()
         {
-            firepower = true;
-            yield return new WaitForSeconds(5f);
-            firepower = false;
+            _currentHealth += 25;
         }
-
-
-    public void Heal()
-    {
-        _currentHealth += 25;
-    }
 
 
         public void RemoveHealth(int amount)
