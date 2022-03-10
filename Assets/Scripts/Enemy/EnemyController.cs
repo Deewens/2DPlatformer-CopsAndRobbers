@@ -51,14 +51,20 @@ public class EnemyController : MonoBehaviour
 
     public void LoadEnemy(EnemyData enemyData)
     {
+        _currentHealth = enemyData.health;
         
+        Vector2 newPos;
+        newPos.x = enemyData.position[0];
+        newPos.y = enemyData.position[1];
+
+        transform.position = newPos;
     }
 
     // Update is called once per frame
     private void Update()
     {
         if (mustPatrol)
-        Patrol();
+            Patrol();
 
         if (_rb.velocity.magnitude > 0 && mustPatrol) blueguardAnimState = BlueguardAnimStates.Running;
         else blueguardAnimState = BlueguardAnimStates.Idle;

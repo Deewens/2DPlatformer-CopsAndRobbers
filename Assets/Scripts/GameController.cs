@@ -13,6 +13,10 @@ public class GameController : MonoBehaviour
     public int sceneIndex = 1;
     string sceneName;
 
+    [SerializeField] private EnemyController enemyController;
+    [SerializeField] private PoliceDroneController policeDroneController;
+    private bool _isLoadingSave = false;
+
     private void Awake()
     {
         instance = this;
@@ -25,16 +29,42 @@ public class GameController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Main Menu") return;
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log(mode);
+        if (!_isLoadingSave) return;
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var enemy in enemies)
+            Destroy(enemy);
         
+        GameObject[] policeDrones = GameObject.FindGameObjectsWithTag("Police Drone");
+        foreach (var policeDrone in policeDrones)
+            Destroy(policeDrone);
+
         GameData data = SaveSystem.LoadGameData();
-        Debug.Log("Scene has been reloaded");
-        Debug.Log("Player position: {X: " + data.playerPosition[0] + ", Y: " + data.playerPosition[1] + "}");
         PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         
         player.LoadPlayer(data.playerHealth, data.playerPosition);
+        updateScore(data.playerScore);
+
+        foreach (var enemyData in data.enemies)
+        {
+            Vector2 position = new Vector2(enemyData.position[0], enemyData.position[1]);
+
+            var newEnemy = Instantiate(enemyController, position, Quaternion.identity);
+            newEnemy.LoadEnemy(enemyData);
+        }
+
+        foreach (var droneData in data.policeDrones)
+        {
+            if (droneData != null)
+            {
+                Vector2 position = new Vector2(droneData.position[0], droneData.position[1]);
+
+                var newEnemy = Instantiate(policeDroneController, position, Quaternion.identity);
+                newEnemy.LoadPoliceDrone(droneData);
+            }
+        }
+
+        _isLoadingSave = false;
     }
     
     public GameController Instance()
@@ -109,9 +139,8 @@ public class GameController : MonoBehaviour
 
     public void LoadSaveGame()
     {
+        _isLoadingSave = true;
         GameData data = SaveSystem.LoadGameData();
         SceneManager.LoadScene(data.currentSceneIdx, LoadSceneMode.Single);
-        Debug.Log("Scene has been reloaded");
-        Debug.Log("Player position: {X: " + data.playerPosition[0] + ", Y: " + data.playerPosition[1] + "}");
     }
 }

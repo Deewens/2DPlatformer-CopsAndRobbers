@@ -56,8 +56,6 @@ namespace Player_Related
             newPlayerPos.y = position[1];
 
             transform.position = newPlayerPos;
-
-            Debug.Log("Player position AFTER: {X: " + transform.position.x + ", Y: " + transform.position.y + "}");
         }
 
         private void Update()
@@ -87,7 +85,6 @@ namespace Player_Related
                     break;
             }
 
-            //_rb.AddForce(new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y), ForceMode2D.Impulse);
             _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
             _animator.SetInteger(State, (int)playerAnimState);
         }
