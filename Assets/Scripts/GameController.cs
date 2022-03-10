@@ -103,6 +103,10 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void resetScore()
+    {
+        score = 0;
+    }
     public void updateScore(int t_score)
     {
         score += t_score;

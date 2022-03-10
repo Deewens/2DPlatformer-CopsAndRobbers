@@ -9,6 +9,7 @@ public class Boundary : MonoBehaviour
     {
         if (!col.CompareTag("Player")) return;
 
+        GameController.instance.resetScore();
         GameController.instance.RestartLevel();
     }
 }
