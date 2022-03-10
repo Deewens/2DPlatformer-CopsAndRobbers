@@ -52,10 +52,9 @@ public class PickupController : MonoBehaviour
                         break;
                 }
             }
-            this.gameObject.SetActive(false);
         }
         rend.enabled = false;
         this.gameObject.GetComponent<Collider2D>().enabled = false;
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 6);
     }
 }

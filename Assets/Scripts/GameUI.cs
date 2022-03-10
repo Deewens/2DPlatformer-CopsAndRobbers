@@ -20,7 +20,14 @@ public class GameUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.SetText("Score: " + GameController.instance.getScore());
+        if (GameController.instance != null)
+        {
+            scoreText.SetText("Score: " + GameController.instance.getScore());
+        }
+        else
+        {
+            scoreText.SetText("Score: NULL");
+        }
         healthText.SetText("Health: " + player.CurrentHealth);
     }
 }

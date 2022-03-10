@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
     public int CurrentHealth => _currentHealth;
 
     public LayerMask groundLayer;
-
+    public Collider2D wallCollider;
     void Initialize()
     {
         SaveSystem.enemies.Add(this);
@@ -75,7 +75,7 @@ public class EnemyController : MonoBehaviour
     private void Patrol()
     {
 
-        if (mustTurn)
+        if (mustTurn || wallCollider.IsTouchingLayers(groundLayer))
         {
             FlipFacedDirection();
         }

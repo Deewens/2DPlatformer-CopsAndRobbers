@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private int _currentHealth;
 
     public int CurrentHealth => _currentHealth;
+    public bool _invincibility;
 
     private void Start()
     {
@@ -62,10 +63,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (_horizontalInput > 0.001f && !_isFacingRight)
-            FlipFacedDirection();
-        else if (_horizontalInput < -0.001f && _isFacingRight)
-            FlipFacedDirection();
+        if (Time.timeScale == 1)
+        {
+            if (_horizontalInput > 0.001f && !_isFacingRight)
+                FlipFacedDirection();
+            else if (_horizontalInput < -0.001f && _isFacingRight)
+                FlipFacedDirection();
+        }
+
 
         switch (playerAnimState)
         {
@@ -99,7 +104,11 @@ public class PlayerController : MonoBehaviour
 
     public void Moving(Vector2 movement)
     {
-        _horizontalInput = movement.x;
+        if (Time.timeScale == 1)
+        {
+            _horizontalInput = movement.x;
+        }
+
         if (IsGrounded()) playerAnimState = PlayerAnimStates.Running;
     }
 
@@ -137,8 +146,10 @@ public class PlayerController : MonoBehaviour
     public IEnumerator ShieldPlayer()
     {
         Shield.SetActive(true);
+        _invincibility = true;
         yield return new WaitForSeconds(5f);
         Shield.SetActive(false);
+        _invincibility = false;
     }
 
     public IEnumerator BoostDamage()
@@ -150,7 +161,7 @@ public class PlayerController : MonoBehaviour
 
     public void Heal()
     {
-        _currentHealth++;
+        _currentHealth += 25;
     }
 
     public void RemoveHealth(int amount)
@@ -167,7 +178,14 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Exit"))
         {
-            GameController.instance.changeLevel();
+            if (GameController.instance != null)
+            {
+                GameController.instance.changeLevel();
+            }
+            else
+            {
+                Debug.Log("Collided with level exit");
+            }
         }
     }
 

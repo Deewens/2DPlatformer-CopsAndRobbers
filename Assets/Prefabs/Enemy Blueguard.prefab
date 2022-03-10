@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 2451939335849351606}
   - component: {fileID: 2451939335849351607}
   - component: {fileID: 1424083783}
+  - component: {fileID: 1642164769}
   m_Layer: 7
   m_Name: Enemy Blueguard
   m_TagString: Enemy
@@ -228,11 +229,11 @@ MonoBehaviour:
   blueguardAnimState: 0
   groundCheckPos: {fileID: 1183286383}
   mustTurn: 0
-  isFacingRight: 0
   mustPatrol: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  wallCollider: {fileID: 1642164769}
 --- !u!70 &1424083783
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -249,6 +250,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.009909153}
   m_Size: {x: 0.47, y: 0.61981833}
   m_Direction: 0
+--- !u!61 &1642164769
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451939335849351600}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2341752, y: 0.04330638}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.47, y: 0.6}
+    newSize: {x: 0.47, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.37376404, y: 0.35299334}
+  m_EdgeRadius: 0
 --- !u!1 &2451939336733083591
 GameObject:
   m_ObjectHideFlags: 0

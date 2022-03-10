@@ -56,13 +56,6 @@ public class DisplayScore : MonoBehaviour
 
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void addScore()
     {
         int additonalScore = 0;

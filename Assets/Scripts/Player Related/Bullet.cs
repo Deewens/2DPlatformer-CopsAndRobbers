@@ -13,6 +13,7 @@ namespace Player_Related
         {
             _rb = GetComponent<Rigidbody2D>();
             _rb.velocity = transform.right * speed;
+            Destroy(gameObject, 0.5f);
         }
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -47,8 +48,9 @@ namespace Player_Related
                 if (col.CompareTag("Player"))
                 {
                     PlayerController playerController = col.GetComponent<PlayerController>();
-                    if (playerController != null)
+                    if (playerController != null && playerController._invincibility == false)
                         playerController.RemoveHealth(damage);
+
                     Destroy(gameObject);
                 }
             }

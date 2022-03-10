@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
     int score = 0;
-    int sceneIndex = 1;
+    public int sceneIndex = 1;
     string sceneName;
 
     private void Awake()
@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
 
     public void changeLevel()
     {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
         sceneIndex++;
 
         if (sceneIndex < 4)

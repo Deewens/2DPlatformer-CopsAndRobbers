@@ -19,7 +19,11 @@ public class Weapon : MonoBehaviour
     }
     public void OnFire()
     {
-        Shoot();
+        if (Time.timeScale == 1)
+        {
+            Shoot();
+        }
+
     }
 
     private void playRandomGunSound()

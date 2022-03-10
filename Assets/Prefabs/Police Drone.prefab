@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2304137971031861854}
   m_Layer: 0
   m_Name: Police Drone
-  m_TagString: Untagged
+  m_TagString: Police Drone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
