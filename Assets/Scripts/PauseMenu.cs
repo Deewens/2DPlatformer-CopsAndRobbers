@@ -55,13 +55,13 @@ public class PauseMenu : MonoBehaviour
     public void SaveGame()
     {
         Debug.Log("Game Saved");
-        SaveSystem.SaveGameData(_player.GetComponent<PlayerController>(), _enemy.GetComponent<EnemyController>());
+        GameController.instance.SaveGame();
     }
 
     public void LoadGame()
     {
-        Debug.Log("Game Loaded");
-        SaveSystem.LoadGameData();
+        Resume();
+        GameController.instance.LoadSaveGame();
     }
 
     public void ReturnToMainMenu()

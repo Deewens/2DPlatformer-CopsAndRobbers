@@ -1,38 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Player_Related;
+using Save_System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class GameData
 {
-    public string scene;
-    public int health;
-    public int healthEnemy;
-    public float[] positionPlayer = new float[3];
-    public float[] positionEnemy = new float[3];
-    public float[] positionCamera = new float[3];
-   // public float[] positionPickups = new float[3];
+    public int currentSceneIdx;
+    public int playerHealth;
+    public float[] playerPosition;
 
-    public GameData(PlayerController player, EnemyController enemy)
+    public EnemyData[] enemies;
+    public PoliceDroneData[] policeDrones;
+
+    public GameData(PlayerController player, List<EnemyController> enemies, List<PoliceDroneController> policeDrones)
     {
-        //level = gameController;
-        health = player.CurrentHealth;
-        positionPlayer[0] = player.transform.position.x;
-        positionPlayer[1] = player.transform.position.y;
-        positionPlayer[2] = player.transform.position.z;
+        currentSceneIdx = SceneManager.GetActiveScene().buildIndex;
+        
+        playerHealth = player.CurrentHealth;
+        
+        playerPosition = new float[2];
+        playerPosition[0] = player.transform.position.x;
+        playerPosition[1] = player.transform.position.y;
 
-        healthEnemy = enemy.CurrentHealth;
-        positionEnemy[0] = enemy.transform.position.x;
-        positionEnemy[1] = enemy.transform.position.y;
-        positionEnemy[2] = enemy.transform.position.z;
+        this.enemies = new EnemyData[enemies.Count];
+        this.policeDrones = new PoliceDroneData[policeDrones.Count];
 
-       //positionPickups[0] = pickup.transform.position.x;
-       //positionPickups[1] = pickup.transform.position.y;
-       //positionPickups[2] = pickup.transform.position.z;
-
-        positionCamera[0] = Camera.main.transform.position.x;
-        positionCamera[1] = Camera.main.transform.position.y;
-        positionCamera[2] = Camera.main.transform.position.z;
-
+        for (int i = 0; i < this.enemies.Length; i++)
+        {
+            EnemyData enemyData = new EnemyData(enemies[i]);
+            this.enemies[i] = enemyData;
+        }
+        
+        for (int i = 0; i < this.policeDrones.Length; i++)
+        {
+            if (policeDrones[i] != null)
+            {
+                PoliceDroneData policeDroneData = new PoliceDroneData(policeDrones[i]);
+                this.policeDrones[i] = policeDroneData;
+            }
+        }
     }
 }

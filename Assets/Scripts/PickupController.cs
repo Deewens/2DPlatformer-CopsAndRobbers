@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Player_Related;
 using UnityEngine;
 
 public class PickupController : MonoBehaviour
@@ -14,11 +15,6 @@ public class PickupController : MonoBehaviour
     private PlayerController player;
     public PickupType boost;
     private Renderer rend;
-
-    private void Awake()
-    {
-        SaveSystem.pickups.Add(this);
-    }
 
     private void Start()
     {
