@@ -8,15 +8,14 @@ namespace Player_Related
 {
     public class PlayerController : MonoBehaviour
     {
-
         public GameObject Shield;
         public bool firepower;
 
         private Animator _animator;
         private Rigidbody2D _rb;
         private CapsuleCollider2D _capsuleCollider;
-    
-        private bool _isFacingRight = true;  // For determining which way the player is currently facing.
+
+        private bool _isFacingRight = true; // For determining which way the player is currently facing.
 
         public PlayerAnimStates playerAnimState;
         private static readonly int State = Animator.StringToHash("State");
@@ -42,7 +41,7 @@ namespace Player_Related
             _animator = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
             _capsuleCollider = GetComponent<CapsuleCollider2D>();
-        
+
             _animator.SetBool(IsArmed, true);
 
             _currentHealth = maxHealth;
@@ -51,18 +50,12 @@ namespace Player_Related
         public void LoadPlayer(int health, float[] position)
         {
             _currentHealth = health;
-        
+
             Vector2 newPlayerPos;
             newPlayerPos.x = position[0];
             newPlayerPos.y = position[1];
 
-            Debug.Log("Player position: {X: " + newPlayerPos[0] + ", Y: " + newPlayerPos[1] + "}");
-
             transform.position = newPlayerPos;
-            
-            Debug.Log("Player position AFTER: {X: " + transform.position.x + ", Y: " + transform.position.y + "}");
-
-
         }
 
         private void Update()
@@ -76,21 +69,22 @@ namespace Player_Related
             }
 
             switch (playerAnimState)
-                {
-                    case PlayerAnimStates.Running:
-                        if (_horizontalInput == 0) playerAnimState = PlayerAnimStates.Idle;
-                        break;
-                    case PlayerAnimStates.Jumping:
-                        if (_rb.velocity.y < 0)
-                            if (IsGrounded())
-                            {
-                                if (_horizontalInput > 0.001f || _horizontalInput < -0.001f) playerAnimState = PlayerAnimStates.Running;
-                                else playerAnimState = PlayerAnimStates.Idle;
-                            }
-                        break;
-                }
-            _rb.transform.position = _rb.transform.position;
-            //_rb.AddForce(new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y), ForceMode2D.Impulse);
+            {
+                case PlayerAnimStates.Running:
+                    if (_horizontalInput == 0) playerAnimState = PlayerAnimStates.Idle;
+                    break;
+                case PlayerAnimStates.Jumping:
+                    if (_rb.velocity.y < 0)
+                        if (IsGrounded())
+                        {
+                            if (_horizontalInput > 0.001f || _horizontalInput < -0.001f)
+                                playerAnimState = PlayerAnimStates.Running;
+                            else playerAnimState = PlayerAnimStates.Idle;
+                        }
+
+                    break;
+            }
+
             _rb.velocity = new Vector2(_horizontalInput * horizontalsSpeed, _rb.velocity.y);
             _animator.SetInteger(State, (int)playerAnimState);
         }
@@ -153,14 +147,14 @@ namespace Player_Related
             yield return new WaitForSeconds(5f);
             Shield.SetActive(false);
             _invincibility = false;
-}
+        }
 
-            public IEnumerator BoostDamage()
-            {
-                firepower = true;
-                yield return new WaitForSeconds(5f);
-                firepower = false;
-            }
+        public IEnumerator BoostDamage()
+        {
+            firepower = true;
+            yield return new WaitForSeconds(5f);
+            firepower = false;
+        }
 
 
         public void Heal()
@@ -193,7 +187,5 @@ namespace Player_Related
                 }
             }
         }
-
-
     }
 }

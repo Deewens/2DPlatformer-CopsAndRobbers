@@ -21,6 +21,7 @@ public class PoliceDroneController : MonoBehaviour
     public AudioSource sound;
 
     private AIPath _aiPath;
+    private AIDestinationSetter _aiDestinationSetter;
     private Animator _animator;
     private GameObject _player;
 
@@ -44,7 +45,12 @@ public class PoliceDroneController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _player = GameObject.FindWithTag("Player");
 
+        _aiDestinationSetter = GetComponent<AIDestinationSetter>();
+        if (_aiDestinationSetter != null) _aiDestinationSetter.target = _player.transform;
+
         _currentHealth = maxHealth;
+        
+        _aiPath.isStopped = false;
     }
 
     private void Update()
@@ -110,6 +116,12 @@ public class PoliceDroneController : MonoBehaviour
 
     public void LoadPoliceDrone(PoliceDroneData policeDroneData)
     {
+        _currentHealth = policeDroneData.health;
         
+        Vector2 newPos;
+        newPos.x = policeDroneData.position[0];
+        newPos.y = policeDroneData.position[1];
+
+        transform.position = newPos;
     }
 }
