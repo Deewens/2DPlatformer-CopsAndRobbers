@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Enums;
 using Pathfinding;
+using Save_System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -40,6 +41,8 @@ public class PoliceDroneController : MonoBehaviour
         _aiPath = GetComponent<AIPath>();
         _animator = GetComponentInChildren<Animator>();
         _player = GameObject.FindWithTag("Player");
+
+        _currentHealth = maxHealth;
     }
 
     private void Update()
@@ -100,5 +103,10 @@ public class PoliceDroneController : MonoBehaviour
             GameController.instance.updateScore(10);
             Destroy(gameObject);
         }
+    }
+
+    public void LoadPoliceDrone(PoliceDroneData policeDroneData)
+    {
+        
     }
 }
