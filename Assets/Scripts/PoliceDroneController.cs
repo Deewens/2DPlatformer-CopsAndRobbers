@@ -17,6 +17,8 @@ public class PoliceDroneController : MonoBehaviour
     [SerializeField] private PoliceDroneAnimStates animState;
     private static readonly int State = Animator.StringToHash("State");
 
+    public AudioSource sound;
+
     private AIPath _aiPath;
     private Animator _animator;
     private GameObject _player;
@@ -80,6 +82,7 @@ public class PoliceDroneController : MonoBehaviour
     {
         var missileObj = Instantiate(missile, shootPoint.transform.position, Quaternion.identity);
         missileObj.LaunchMissile(direction);
+        sound.Play();
     }
 
     /// <summary>
