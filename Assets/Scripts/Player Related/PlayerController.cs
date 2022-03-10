@@ -75,12 +75,7 @@ namespace Player_Related
                 FlipFacedDirection();
         }
 
-        if (_horizontalInput > 0.001f && !_isFacingRight)
-                FlipFacedDirection();
-            else if (_horizontalInput < -0.001f && _isFacingRight)
-                FlipFacedDirection();
-
-            switch (playerAnimState)
+        switch (playerAnimState)
             {
                 case PlayerAnimStates.Running:
                     if (_horizontalInput == 0) playerAnimState = PlayerAnimStates.Idle;
@@ -186,14 +181,16 @@ namespace Player_Related
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-
-            if (GameController.instance != null)
+            if (collision.gameObject.CompareTag("Exit"))
             {
-                GameController.instance.changeLevel();
-            }
-            else
-            {
-                Debug.Log("Collided with level exit");
+                if (GameController.instance != null)
+                {
+                    GameController.instance.changeLevel();
+                }
+                else
+                {
+                    Debug.Log("Collided with level exit");
+                }
             }
         }
 
