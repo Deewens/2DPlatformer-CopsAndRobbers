@@ -28,6 +28,7 @@ namespace Player_Related
                     if (enemyController != null)
                     {
                         enemyController.TakeDamage(damage);
+                        Destroy(gameObject);
                     }
                 }
 
@@ -35,6 +36,7 @@ namespace Player_Related
                 {
                     PoliceDroneController droneController = col.GetComponent<PoliceDroneController>();
                     if (droneController != null) droneController.RemoveHealth(damage);
+                    Destroy(gameObject);
                 }
             }
 
@@ -47,6 +49,7 @@ namespace Player_Related
                     PlayerController playerController = col.GetComponent<PlayerController>();
                     if (playerController != null)
                         playerController.RemoveHealth(damage);
+                    Destroy(gameObject);
                 }
             }
         }

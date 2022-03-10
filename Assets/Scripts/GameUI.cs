@@ -9,18 +9,18 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI healthText;
 
     private PlayerController player;
-    private GameController game;
+    //private GameController game;
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        game = GameController.instance;
+        //game = GameController.instance;
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.SetText("Score: " + game.getScore());
+        scoreText.SetText("Score: " + GameController.instance.getScore());
         healthText.SetText("Health: " + player.CurrentHealth);
     }
 }

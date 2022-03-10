@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1183286382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183286383}
+  m_Layer: 7
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1183286383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183286382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.439, y: -0.378, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2451939335849351602}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2451939335260637622
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,10 +71,10 @@ GameObject:
   - component: {fileID: 2451939335849351602}
   - component: {fileID: 2451939335849351601}
   - component: {fileID: 2451939335849351603}
-  - component: {fileID: 2451939335849351604}
   - component: {fileID: 2451939335849351605}
   - component: {fileID: 2451939335849351606}
   - component: {fileID: 2451939335849351607}
+  - component: {fileID: 1424083783}
   m_Layer: 7
   m_Name: Enemy Blueguard
   m_TagString: Enemy
@@ -65,6 +95,7 @@ Transform:
   m_Children:
   - {fileID: 2451939335260637623}
   - {fileID: 2451939336733083592}
+  - {fileID: 1183286383}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -138,22 +169,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &2451939335849351604
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2451939335849351600}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.47, y: 0.6}
-  m_Direction: 0
 --- !u!50 &2451939335849351605
 Rigidbody2D:
   serializedVersion: 4
@@ -190,6 +205,7 @@ MonoBehaviour:
   shootDistance: 3.5
   shootPoint: {fileID: 2451939335260637623}
   bullet: {fileID: 4897552536251806909, guid: cec68aa4a0a628548b094b3fd643577a, type: 3}
+  fireRate: 1
   characterLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -207,9 +223,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9a49ea555da8b4d8c4687e3fcb4a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  health: 100
+  speed: 100
+  maxHealth: 100
   blueguardAnimState: 0
+  groundCheckPos: {fileID: 1183286383}
+  mustTurn: 0
+  isFacingRight: 0
+  mustPatrol: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!70 &1424083783
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451939335849351600}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.009909153}
+  m_Size: {x: 0.47, y: 0.61981833}
+  m_Direction: 0
 --- !u!1 &2451939336733083591
 GameObject:
   m_ObjectHideFlags: 0

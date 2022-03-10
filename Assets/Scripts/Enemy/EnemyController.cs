@@ -14,20 +14,20 @@ public class EnemyController : MonoBehaviour
     
     public BlueguardAnimStates blueguardAnimState;
     private static readonly int AnimState = Animator.StringToHash("State");
+    public Transform groundCheckPos;
+    public bool mustTurn;
 
     private Rigidbody2D _rb;
     private Animator _animator;
-    
-    private bool _isFacingRight = true;  // For determining which way the player is currently facing.
-    public bool IsFacingRight => _isFacingRight;
-    
-    private Vector2 _dir;
-    private Vector2 _previousDir;
+   
 
     public bool IsFollowPlayer { set; private get; }
+    public bool mustPatrol;
+
 
     public int CurrentHealth => _currentHealth;
 
+    public LayerMask groundLayer;
 
     void Initialize()
     {
@@ -40,7 +40,16 @@ public class EnemyController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _currentHealth = maxHealth;
+        mustPatrol = true;
         Initialize();
+    }
+
+    private void FixedUpdate()
+    {
+        if (mustPatrol)
+        {
+            mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
+        }
     }
 
     public void LoadEnemy()
@@ -54,18 +63,10 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        /*if (!IsFollowPlayer)
-            Patrol();*/
+        if (mustPatrol)
+        Patrol();
 
-        _dir = ((Vector2) transform.position - _previousDir).normalized;
-        _previousDir = transform.position;
-        
-        if (_dir.x > 0 && !_isFacingRight)
-            FlipFacedDirection();
-        else if (_dir.x < 0 && _isFacingRight)
-            FlipFacedDirection();
-
-        if (_rb.velocity.magnitude > 0 || _dir.x > 0 || _dir.x < 0) blueguardAnimState = BlueguardAnimStates.Running;
+        if (_rb.velocity.magnitude > 0 && mustPatrol) blueguardAnimState = BlueguardAnimStates.Running;
         else blueguardAnimState = BlueguardAnimStates.Idle;
         
         _animator.SetInteger(AnimState, (int) blueguardAnimState);
@@ -73,25 +74,13 @@ public class EnemyController : MonoBehaviour
 
     private void Patrol()
     {
-        var offset = 0.5f;
-        if (!_isFacingRight) offset = -offset;
-        
-        var velocity = new Vector2(speed, _rb.velocity.y);
 
-        var startPos = (Vector2) transform.position + (Vector2.right * offset);
-        
-        Debug.DrawRay(startPos, Vector2.down, Color.yellow);
-        var hit = Physics2D.Raycast(startPos, Vector2.down, 5);
-        
-        Debug.Log(offset);
-        Debug.Log(_isFacingRight);
-        
-        if (hit.collider == null)
+        if (mustTurn)
         {
-            velocity.x = -velocity.x;
+            FlipFacedDirection();
         }
         
-        _rb.velocity = velocity;
+        _rb.velocity = new Vector2(speed * Time.fixedDeltaTime, _rb.velocity.y);
     }
 
     public void TakeDamage(int amount)
@@ -115,7 +104,7 @@ public class EnemyController : MonoBehaviour
     /// </summary>
     private void FlipFacedDirection()
     {
-        _isFacingRight = !_isFacingRight;
-        transform.Rotate(0f, 180f, 0f);
+        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        speed *= -1;
     }
 }

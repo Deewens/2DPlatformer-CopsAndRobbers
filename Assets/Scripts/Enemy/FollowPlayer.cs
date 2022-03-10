@@ -29,17 +29,17 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (CanSeePlayer(_agroDistance))
-        {
-            _enemyController.IsFollowPlayer = true;
-            transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, _enemyController.speed * Time.deltaTime);
-        }
-        else
-        {
-            _enemyController.IsFollowPlayer = false;
-        }
+        //if (CanSeePlayer(_agroDistance))
+        //{
+        //    _enemyController.IsFollowPlayer = true;
+        //    //transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, _enemyController.speed * Time.deltaTime);
+        //}
+        //else
+        //{
+        //    _enemyController.IsFollowPlayer = false;
+        //}
 
-        if (CanSeePlayer(shootDistance))
+        if (CanSeePlayer())
         {
             if (Time.time > _nextShootTime)
             {
@@ -49,17 +49,17 @@ public class FollowPlayer : MonoBehaviour
         }
     }
 
-    bool CanSeePlayer(float distance)
+    bool CanSeePlayer()
     {
         bool seePlayer = false;
-        float castDist = distance;
 
-        if (!_enemyController.IsFacingRight)
+        if (_enemyController.mustTurn)
         {
-            castDist = -distance;
+            shootDistance *= -1;
+            shootPoint.localScale = new Vector3(shootPoint.localScale.x * -1, shootPoint.localScale.y * -1, shootPoint.localScale.z);
         }
 
-        Vector2 endPos = castPoint.position + Vector3.right * castDist;
+        Vector2 endPos = castPoint.position + Vector3.right * shootDistance;
 
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("Player"));
         
@@ -68,7 +68,6 @@ public class FollowPlayer : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Player"))
             {
                 seePlayer = true;
-                //Debug.Log("Player Spotted");
             }
             else
             {
@@ -88,8 +87,9 @@ public class FollowPlayer : MonoBehaviour
     
     private void Shoot()
     {
-        var obj = Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
-        if (!_enemyController.IsFacingRight)
+        var obj = Instantiate(bullet, shootPoint.transform.position, bullet.transform.rotation);
+
+        if (_enemyController.transform.localScale.x == -1)
         {
             obj.transform.right = -obj.transform.right;
         }
