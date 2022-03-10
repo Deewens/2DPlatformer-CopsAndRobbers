@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using Enums;
+using Save_System;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -28,11 +29,8 @@ public class EnemyController : MonoBehaviour
     public int CurrentHealth => _currentHealth;
 
     public LayerMask groundLayer;
+
     public Collider2D wallCollider;
-    void Initialize()
-    {
-        SaveSystem.enemies.Add(this);
-    }
 
     // Start is called before the first frame update
     private void Start()
@@ -41,7 +39,6 @@ public class EnemyController : MonoBehaviour
         _animator = GetComponent<Animator>();
         _currentHealth = maxHealth;
         mustPatrol = true;
-        Initialize();
     }
 
     private void FixedUpdate()
@@ -52,12 +49,9 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void LoadEnemy()
+    public void LoadEnemy(EnemyData enemyData)
     {
-        GameData data = SaveSystem.LoadGameData();
-
-        transform.position = new Vector3(data.positionEnemy[0], data.positionEnemy[1], data.positionEnemy[2]);
-        _currentHealth = data.healthEnemy;
+        
     }
 
     // Update is called once per frame
