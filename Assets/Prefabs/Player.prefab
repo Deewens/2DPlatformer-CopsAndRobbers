@@ -200,6 +200,7 @@ MonoBehaviour:
     m_Bits: 8
   stateDebugText: {fileID: 0}
   maxHealth: 100
+  _invincibility: 0
 --- !u!82 &1474394887132854986
 AudioSource:
   m_ObjectHideFlags: 0
@@ -327,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ce46cda7a1de2418ad82cdbf6b1533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 4219810826157345201, guid: b87ab3b1361cfdb49b51f742ce9ac86a, type: 3}
 --- !u!1 &1474394888896158378
 GameObject:
   m_ObjectHideFlags: 0

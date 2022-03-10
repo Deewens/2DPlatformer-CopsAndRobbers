@@ -22,6 +22,23 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
+    public GameController Instance()
+    {
+        if (instance == null)
+        {
+            return instance = this;
+        }
+
+        return instance;
+    }
+    
+    public void ResetData()
+    {
+        score = 0;
+        sceneIndex = 1;
+        _isLoadingSave = false;
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -43,7 +60,7 @@ public class GameController : MonoBehaviour
         PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         
         player.LoadPlayer(data.playerHealth, data.playerPosition);
-        updateScore(data.playerScore);
+        score = data.playerScore;
 
         foreach (var enemyData in data.enemies)
         {
@@ -65,16 +82,6 @@ public class GameController : MonoBehaviour
         }
 
         _isLoadingSave = false;
-    }
-    
-    public GameController Instance()
-    {
-        if (instance == null)
-        {
-            return instance = this;
-        }
-
-        return instance;
     }
 
     public void changeLevel()
